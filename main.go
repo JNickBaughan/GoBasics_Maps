@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
 func main() {
 	// map with [string] for the keys and string for the values
@@ -39,4 +42,14 @@ func main() {
 	numberAsKey[1] = "one"
 	fmt.Println("numberAsKey: ", numberAsKey)
 
+	printKeyValuePairs(numbers)
+
+}
+
+// iterate over maps
+func printKeyValuePairs(m map[string]int) {
+	for key, value := range m {
+		fmt.Println("key for " + strconv.Itoa(value) + ", is " + key)
+
+	}
 }

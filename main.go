@@ -48,7 +48,12 @@ func main() {
 	numberAsKey[1] = "one"
 	fmt.Println("numberAsKey: ", numberAsKey)
 
+	// this is passed by reference
 	printKeyValuePairs(numbers)
+	// if using a struct we would need to pass a pointer
+	fmt.Println(numbers)
+	addKeyValue(numbers, "four", 4)
+	fmt.Println(numbers)
 
 }
 
@@ -58,4 +63,9 @@ func printKeyValuePairs(m map[string]int) {
 		fmt.Println("key for " + strconv.Itoa(value) + ", is " + key)
 
 	}
+}
+
+// this works without a pointer because maps are pass by reference
+func addKeyValue(m map[string]int, key string, value int) {
+	m[key] = value
 }

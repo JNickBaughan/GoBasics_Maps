@@ -5,6 +5,12 @@ import (
 	"strconv"
 )
 
+// maps vs structs
+// in maps all keys must be the same type //  in structs can you have a key of type not string???
+// in maps you don't know all the keys at compile time vs structs are more like a traditional class
+// in maps all values must be same type vs not the case with structs
+// in maps keys support indexing vs not so much with structs
+// maps === reference type vs structs === value type
 func main() {
 	// map with [string] for the keys and string for the values
 	numbers := map[string]int{
